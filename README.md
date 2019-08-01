@@ -19,7 +19,7 @@ Code:
 
 
 #### Resultados:
-![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_1.jpg)
+
 ![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_2.jpg)
 ![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_3.jpg)
 ![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_4.jpg)
