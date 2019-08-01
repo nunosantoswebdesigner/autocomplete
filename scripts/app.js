@@ -42,10 +42,10 @@ const searchTshirts = async searchText => {
 }
 
 // f() para calcular n de matchs
-const setMatchCounter = matches => {
+const setMatchCounter = async matches => {
     console.log(matches.length)
     // teste ternario para controlar plural no texto do resultado
-    const html = `<span class="counter-result">${matches.length  + ' ' + (matches.length == 1 ? 'Resultado' : 'Resultados') }</span>`
+    const html = await `<span class="counter-result">${matches.length  + ' ' + (matches.length == 1 ? 'Resultado' : 'Resultados') }</span>`
     matchCounter.innerHTML = html;
 }
 
@@ -119,7 +119,13 @@ const outputHtml = matches => {
 // listen evento input e função callback
 search.addEventListener('focus', () => form.style.boxShadow = '0px 0px 6px 1px rgba(233, 70, 65,0.4)');
 
+String.prototype.capitalize = function() {
+    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+};
+
 search.addEventListener('input', () => {
     iconSearch.style.visibility = 'hidden';
+    // MAIN FUNCTION =>
+    event.shiftKey;
     searchTshirts(search.value)
 });
