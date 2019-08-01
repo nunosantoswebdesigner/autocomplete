@@ -1,0 +1,228 @@
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+
+
+// less variables
+@red: rgb(233, 70, 65);
+
+@text: rgb(40, 40, 40);
+@text-list-item: rgb(185, 185, 185);
+
+@background: rgb(245, 245, 245);
+@background_hover: darken(@background, 5%);
+
+// classes / mixinis
+.transitionBackground {
+  -webkit-transition: background-color 0.75s ease-in-out;
+  -moz-transition: background-color 0.75s ease-in-out;
+  -o-transition: background-color 0.75s ease-in-out;
+  transition: background-color 0.75s ease-in-out;
+}
+.transitionText {
+  -webkit-transition: color 0.75s ease-in-out;
+  -moz-transition: color 0.75s ease-in-out;
+  -o-transition: color 0.75s ease-in-out;
+  transition: color 0.75s ease-in-out;
+}
+
+// simple resets
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+:root {
+    font-size: 16px;
+}
+
+html {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+}
+
+body {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+small {
+    display: block;
+    font-size: 90%;
+    padding: 1rem 0;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.container {
+    width: 100%;
+    .row {
+        .col {
+            width: 455px;
+            margin: 0 auto;
+            padding: 35px;
+            .form-group {
+                width: 100%;
+                padding: 10px;
+                background-color: @background;
+                border-radius: 10px 35px 35px  10px;
+                form {
+                    display: flex;
+                    justify-content: space-around;
+                    height: 40px;
+                    max-width: 80%;
+                    border: 2px solid @red;
+                    border-radius: 5px;
+                    .transitionBackground;
+                    #autocomplete-container {
+                        position: relative;
+                        z-index: 99;
+                        width: 75%;
+                        .form-control-input-placeolder {
+                            width: 100%;
+                            min-width: 270px;
+                            height: 100%;
+                            min-height: 40px;
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            background: transparent;
+                            font-size: 18px;
+                            z-index: 9;
+                            color: @text-list-item;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            line-height: 2.3;
+                        }
+                        input,
+                        .form-control-input {
+                            width: 100%;
+                            min-width: 270px;
+                            height: 100%;
+                            min-height: 40px;
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            background: transparent;
+                            font-size: 18px;
+                            z-index: 9999;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            color: @text;
+                            &:focus {
+                                outline: none;
+                            }
+                            
+                            &::placeholder {
+                                color: @text;
+                            }
+                        }
+                    }
+                    .form-control-icon {
+                        display: block;
+                        width: 16px;
+                        color: @red;
+                    }
+                }
+                &:hover {
+                    background-color:  @background_hover;
+                    .transitionBackground;
+                }
+            }
+            .counter-control-text {
+                margin-top: 15px;
+                .counter-result {
+                    padding: 5px 0 10px 10px;
+                    display: block;
+                    margin-top: 15px;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+            #match-list {
+                width: 100%;
+                transition: all 1.2s ease-in-out;
+                .list-item {
+                    min-height: 65px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-bottom: 1px solid @text-list-item;
+                    .list-item-img{
+                        width: 35px;
+                        height: 50px;
+                        margin: 0px 15px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    .list-item-title-link {
+                        text-decoration: none;
+                        border-bottom: 1px solid @text-list-item;
+                        color: @text-list-item;
+                    }
+                    .list-item-title{
+                        margin: 0;
+                        text-decoration: none;
+                        border-bottom: 1px solid @text-list-item;
+                        color: @text;
+                        max-width: fit-content;
+                        font-size: 16px;
+                        line-height: 1;
+                        position: relative;
+                        .transitionText;
+                        
+                        &:hover {
+                            color: @text !important;
+                            .transitionText;
+                        }
+                    }
+                    .list-item-desc{
+                        padding: 0;
+                        color: @text;
+                        font-size: 10px;
+                    }
+                    &:hover {
+                        background-color:  @background_hover;
+                        .transitionBackground;
+                        .list-item-title,
+                        .list-item-desc {
+                            .transitionText;
+                            color: @text-list-item;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
