@@ -9,12 +9,23 @@ Code:
 
 
 #### Exercício:
-![sh](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_1.png)
+![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_1.png)
     
     - 1. Criar página em HTML + CSS3 + Javascript com o seguinte aspecto gráfico:
     - 2. Os items listados deverão ser obtidos através de um Json que se encontra na pasta deste exercício (products.json).
     - 3. A caixa de pesquisa deverá despoletar o preenchimento e, a população da listagem, a partir da terceira letra / auto-complete. Antes de qualquer pesquisa, não deverão ser apresentados quaisquer resultados.
     - 4. O “total de resultados” deverá ser dinâmico em função dos items obtidos.
+
+
+
+#### Resultados:
+![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_1.jpg)
+![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_2.jpg)
+![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_3.jpg)
+![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_4.jpg)
+![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_5.jpg)
+![ns](https://github.com/nunosantoswebdesigner/pdfs/blob/gh-pages/images/exercicio_6.jpg)
+
 
 ### json file path: data/products.json
 ```javascript

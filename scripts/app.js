@@ -19,7 +19,7 @@ const searchTshirts = async searchText => {
     // para fazer corresponder o valor do input aos items do json
     // Usei o filter method para percorrer o array e devolver novo array com as correspondencias
     let matches = tshirts.filter(tshirt => {
-        const regex = new RegExp(`^${searchText}`, 'gi')
+        const regex = new RegExp(`${searchText}`, 'gi')
         return tshirt.title.match(regex)
     })
 
@@ -115,6 +115,7 @@ const outputHtml = matches => {
     }
 }
 
+// App f()
 // listen evento input e função callback
 search.addEventListener('input', () => searchTshirts(search.value))
 search.addEventListener('focus', () => form.style.boxShadow = '0px 0px 6px 1px rgba(233, 70, 65,0.4)');
